@@ -76,6 +76,7 @@ public class DatePanel : MonoBehaviour
             var fileName = selectedYear.ToString() + "-" + selectedMonth.ToString() + "-" + a.ToString();
             var path = Environment.GetFolderPath(Environment.SpecialFolder.Personal)
                             + $"\\日記\\{fileName}.txt";
+            Debug.Log(path);
             button.interactable = File.Exists(path);
             //Button.ButtonClickedEvent event = new Button.ButtonClickedEvent();
             button.onClick.AddListener(() => { OnClickDay(a); });
